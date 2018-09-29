@@ -28,18 +28,14 @@ int main()
 
 // get credit hours from user
 	creditHours = getCreditHours();
-
 // get course level from user (this also displays menu)
 	courseLevelSelection = selectCourseLevel();
-	//cout << endl << courseLevelSelection << endl;
+// evalute the rate for that course level
 	ratePerCreditHour = rateFromCourseLevel(courseLevelSelection);
-
-	//cout << ratePerCreditHour;
 
 // loop to display tuition this yr and next 5
 	outputYearlyTuition(ratePerCreditHour, creditHours, courseLevelSelection);
 	
-// output to text file
 
 	system("pause");
 	return 0;
@@ -100,7 +96,6 @@ int selectCourseLevel()
 		}
 		else
 			cout << "Reached end of file! Hit any key to return to the top";
-		//cin.ignore(1, '\n');
 		cin.get(entry);
 		// if the end of the file has been reached, do not allow a selection, 
 		// reset the filestream to the begining
