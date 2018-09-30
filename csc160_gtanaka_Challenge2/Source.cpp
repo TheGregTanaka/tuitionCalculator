@@ -81,11 +81,10 @@ int selectCourseLevel()
 	int count = 0;
 	string line;
 
-	// For consistancy in the appearance of the menu, clear the screen first.
+	// For consistancy in the appearance of the menu, clear the screen first, 
+	// make sure there is no newline in buffer.
 	system("cls");
-
-	// Set cursor to begining of file
-	infile.seekg(0, infile.beg);
+	cin.ignore(1, '\n');
 
 	while (toupper(entry) != 'Y')
 	{
@@ -148,7 +147,6 @@ double rateFromCourseLevel(int courseLevel)
 		break;
 	case 1:
 		infile.ignore(1000, '\n');
-		//getline(infile, line);
 		infile >> rate;
 		break;
 	case 2:
@@ -156,13 +154,12 @@ double rateFromCourseLevel(int courseLevel)
 		{
 			infile.ignore(1000, '\n');
 		}
-		//getline(infile, line);
 		infile >> rate;
 		break;
 	default:
 		rate = 0.0;
 	}
-	//rate = line
+	
 	return rate;
 }
 
