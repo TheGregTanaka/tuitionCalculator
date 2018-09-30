@@ -84,6 +84,9 @@ int selectCourseLevel()
 	// For consistancy in the appearance of the menu, clear the screen first.
 	system("cls");
 
+	// Set cursor to begining of file
+	infile.seekg(0, infile.beg);
+
 	while (toupper(entry) != 'Y')
 	{
 		cout << "Please select a course level. Enter Y to make your selection," <<
