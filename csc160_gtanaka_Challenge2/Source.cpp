@@ -216,6 +216,7 @@ void outputYearlyTuition(double rate, int hours, int level)
 	@param rate This is the cost per credit hour, dictated by the level of
 		courses the student has selected prior in the program
 	@param creditHours The number of credit hours the student has enrolled in
+	@return double The cost of tuition for the given year
 */
 double calculateYearlyTuition(int year, double rate, int creditHours)
 {
